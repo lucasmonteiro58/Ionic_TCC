@@ -5,7 +5,51 @@
     </ion-title>
   </ion-toolbar>
 </ion-header> -->
-
 <ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-avatar class="ion-margin-start ion-margin-top user-avatar">
+          <img src="./assets/exemple.jpg">
+        </ion-avatar>
+      </ion-col>
+
+      <ion-col size="8" class="ion-margin-top">
+        <ion-text class="user-name"> Lucas Monteiro</ion-text>
+        <br>
+        <ion-text class="user-age"> 22 anos</ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-item>
+        <ion-label position="stacked" >Peso:</ion-label>
+        <ion-input type="number" required="true" ></ion-input>
+      </ion-item>
+    </ion-row>
+
+    <ion-row>
+      <ion-item>
+        <ion-label position="stacked" >Altura:</ion-label>
+        <ion-input type="number" required="true" ></ion-input>
+      </ion-item>
+    </ion-row>
+
+    <ion-row>
+      <ion-button shape="round" class="button" >Calcular IMC</ion-button>
+    </ion-row>
+
+    <ion-row>
+      <ion-text>
+        21.5
+      </ion-text>
+    </ion-row>
+    <ion-row>
+      <ion-text>
+        saudável
+      </ion-text>
+    </ion-row>
+
+  </ion-grid>
 
 </ion-content>

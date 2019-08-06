@@ -1,1 +1,15 @@
+.float-bottom{
+  position: absolute;
+  bottom: 10px;
+}
 
+.position-center{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+#map{
+  height: 100%;
+  background-color: #f9f9f9;
+}
