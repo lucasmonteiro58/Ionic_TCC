@@ -1,6 +1,6 @@
 .float-bottom{
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
 }
 
 .position-center{
@@ -12,4 +12,10 @@
 #map{
   height: 100%;
   background-color: #f9f9f9;
+}
+
+.button-start{
+    height: 55px;
+    width: 50%;
+    font-size: 1.3em;
 }
