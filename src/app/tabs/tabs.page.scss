@@ -2,3 +2,36 @@
     height: 73px;
 }
 
+ion-tab-button{
+    div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 54px;
+    height: 54px;
+    }
+}
+
+
+.img1{
+    background-image: url( "/assets/Historico.svg");    
+}
+
+.img2{
+    background-image: url( "/assets/Atividade.svg");    
+}
+
+.img3{
+    background-image: url( "/assets/Perfil.svg");    
+}
+
+.tab-selected{
+    .img1{
+        background-image: url( "/assets/HistoricoON.svg"); 
+    }
+    .img2{
+        background-image: url( "/assets/AtividadeON.svg"); 
+    }
+    .img3{
+        background-image: url( "/assets/PerfilON.svg"); 
+    }
+}
