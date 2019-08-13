@@ -1,44 +1,29 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Platform, LoadingController } from '@ionic/angular';
-import { Environment, GoogleMap, GoogleMaps } from '@ionic-native/google-maps';
+import {Router } from '@angular/router';
+
+declare var google;
 
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
-export class Tab2Page implements OnInit {
+export class Tab2Page {
+  map: any;
+  constructor(private router: Router) { }
 
-  @ViewChild('map', { static: true} ) public mapElement: any;
-  private loading: any;
-  private map: GoogleMap;
-
-  constructor(
-    private platform: Platform,
-    private loadingCtrl: LoadingController
-  ) {
-
-   }
-
-  ngOnInit() {
-    this.mapElement = this.mapElement.nativeElement;
-
-    this.mapElement.style.width = this.platform.width() + 'px';
-    this.mapElement.style.height = this.platform.height() + 'px';
-
-    this.loadMap();
+  goRun() {
+    this.router.navigate(['run']);
   }
-
-  loadMap() {
-    // this.loading = this.loadingCtrl.create({ message: 'Aguarde'});
-    // await this.loading.present();
-
-    Environment.setEnv({
-      API_KEY_FOR_BROWSER_RELEASE: 'AIzaSyCBA2sw2SDLNj41vLMlAQCi3kcWE43Bedc',
-      API_KEY_FOR_BROWSER_DEBUG: 'AIzaSyCBA2sw2SDLNj41vLMlAQCi3kcWE43Bedc'
-    });
-
-    this.map = GoogleMaps.create(this.mapElement);
+  OnInit() {
+    const position = new google.maps.LatLng(-21.763409, -43.349034);
+    const mapOptions = {
+      zoom: 18,
+      center: position,
+      disableDefaultUI: true
+    };
+    this.map = new google.maps.Map(document.getElementById('map'), mapOptions);
   }
 
 }
+

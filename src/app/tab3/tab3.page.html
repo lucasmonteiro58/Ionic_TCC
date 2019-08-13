@@ -1,10 +1,3 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Three
-    </ion-title>
-  </ion-toolbar>
-</ion-header> -->
 <ion-content>
   <ion-grid>
     <ion-row>
@@ -21,37 +14,38 @@
         <ion-text class="user-age"> 22 anos</ion-text>
       </ion-col>
     </ion-row>
-    <form class="form">
+   
       <ion-row class="inputs">
         <ion-item>
           <ion-label class="labels" position="stacked">Peso:</ion-label>
-          <ion-input type="number" required="true"></ion-input>
+          <ion-input type="number" placeholder="ex: 70Kg" required="true" (input)="peso = $event.target.value"></ion-input>
         </ion-item>
       </ion-row>
 
       <ion-row class="inputs">
         <ion-item>
           <ion-label class="labels" position="stacked">Altura:</ion-label>
-          <ion-input type="number" required="true"></ion-input>
+          <ion-input type="number" placeholder="ex: 1.80m" (input)="altura = $event.target.value" required="true"></ion-input>
         </ion-item>
       </ion-row>
 
       <ion-row>
-        <ion-button shape="round" class="button">Calcular IMC</ion-button>
+        <ion-button shape="round" class="button" (click)="calcImc()">Calcular IMC</ion-button>
       </ion-row>
-    </form>
-
-    <div class="imc-content">
-      <ion-row class="imc-label">
-        <ion-text class="imc-val">
-          21.5
-        </ion-text>
-      </ion-row>
-      <ion-row class="imc-label">
-        <ion-text class="imc-type">
-          Saudável
-        </ion-text>
-      </ion-row>
+    
+    <div *ngIf="imc > 0">
+      <div class="imc-content">
+        <ion-row class="imc-label">
+          <ion-text class="imc-val" id="imc-val">
+            {{viewImc}}
+          </ion-text>
+        </ion-row>
+        <ion-row class="imc-label">
+          <ion-text class="imc-type">
+            {{viewCondicao}}
+          </ion-text>
+        </ion-row>
+      </div>
     </div>
   </ion-grid>
 

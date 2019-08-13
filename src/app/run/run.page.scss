@@ -1,0 +1,42 @@
+.content{
+    width: 100%;
+    height: 100%;
+    background-color: #333333 !important;
+
+    .title{
+        color: white;
+        font-weight: 600;
+        font-size: 25px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .distance{
+        color: white;
+        font-weight: 600;
+        font-size: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 15px;
+        
+    }
+    .km{
+        font-weight: 500;
+        font-size: 25px;
+        padding-top: 50px;
+        padding-left: 10px;
+    }
+
+    .infos{
+        display: flex;
+        justify-content: space-around;
+
+        .img-infos{
+            width: 40px;
+        }
+    }
+
+}
