@@ -38,7 +38,7 @@ export class Tab3Page {
 
 
   calcImc() {
-    this.imc = (this.peso / (this.altura * this.altura))
+    this.imc = (this.peso / (this.altura * this.altura));
     this.viewImc = (this.imc).toFixed(2);
     console.log(this.viewImc);
 

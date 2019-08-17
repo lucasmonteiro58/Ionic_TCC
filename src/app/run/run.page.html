@@ -1,18 +1,18 @@
 <ion-content class="viewport">
   <ion-grid class="content">
     <ion-row class="title">Corrida</ion-row>
-    <ion-row class="distance">0.0<span class="km">km</span></ion-row>
+    <ion-row class="distance">{{kmString}}<span class="km">km</span></ion-row>
     <ion-row class="infos">
       <ion-col size="3">
         <ion-img class="img-infos" src="../assets/clock.svg"></ion-img>
         <ion-text>
-          <p class="text-infos">00:00:00</p>
+          <p class="text-infos">{{hour}}:{{min}}:{{sec}}</p>
         </ion-text>
       </ion-col>
       <ion-col size="3">
         <ion-img class="img-infos"  src="../assets/fire.svg"></ion-img>
         <ion-text>
-         <p class="text-infos">0 Kcal</p>
+         <p class="text-infos">{{KcalString}}</p>
         </ion-text>
       </ion-col>
       <ion-col size="3">
@@ -23,11 +23,18 @@
       </ion-col>
     </ion-row>
     <ion-row class="action-buttons">
-      <ion-col class="btn-play-content-1" size="6">
-        <ion-img class="play-button" src="../assets/play.svg"></ion-img>
+      <ion-col 
+        [class.btn-play-content-1]="isStarted" 
+        [class.btn-play-content-1-ON]="!isStarted" size="6">
+        <ion-img class="play-button" (click)="startRun()" [src]="btn1"></ion-img>
       </ion-col>
-      <ion-col  class="btn-play-content-2" size="6">
-        <ion-img class="pause-button" src="../assets/pause.svg"></ion-img>
+      <ion-col 
+        [class.btn-play-content-2]="!isStarted" 
+        [class.btn-play-content-2-ON]="isStarted" size="6">
+        <ion-img class="pause-button" (click)="pauseRun()" [src]="btn2"></ion-img>
+      </ion-col>
+      <ion-col [class.btn-play-content-3]="!isPaused" [class.btn-play-content-3-ON]="isPaused" size="6">
+        <ion-img class="stop-button" (click)="stopRun()" [src]="btn3"></ion-img>
       </ion-col>
     </ion-row>
   </ion-grid>
