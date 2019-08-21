@@ -9,9 +9,13 @@
   justify-content: center;
 }
 
-#map{
+#map_canvas{
   height: 100%;
-  background-color: #f9f9f9;
+  //background-color: #f9f9f9;
+}
+
+.gmnoprint{
+  display:none !important;
 }
 
 .button-start{

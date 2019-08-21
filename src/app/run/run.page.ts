@@ -56,12 +56,18 @@ export class RunPage implements OnInit {
     this.hour = '00';
     this.min = '00';
     this.sec = '00';
+    this.km = 0;
+    this.kmString = '0.0';
+    this.Kcal = 0;
+    this.KcalString = '0 Kcal';
   }
 
   startRun() {
     this.isStarted = true;
     this.isPaused = false;
     this.contador = undefined;
+    this.contadorKm = undefined;
+    this.contadorKcal = undefined;
     this.startCronometro();
     this.startKm();
     this.startKcal();
@@ -71,6 +77,8 @@ export class RunPage implements OnInit {
     this.isStarted = false;
     this.isPaused = true;
     clearInterval(this.contador);
+    clearInterval(this.contadorKm);
+    clearInterval(this.contadorKcal);
   }
 
   stopRun() {

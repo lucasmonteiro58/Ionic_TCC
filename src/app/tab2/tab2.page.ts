@@ -1,5 +1,16 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router } from '@angular/router';
+import {Platform} from '@ionic/angular';
+import {
+  GoogleMaps,
+  GoogleMap,
+  GoogleMapsEvent,
+  GoogleMapOptions,
+  CameraPosition,
+  MarkerOptions,
+  Marker,
+  Environment
+} from '@ionic-native/google-maps';
 
 declare var google;
 
@@ -9,21 +20,31 @@ declare var google;
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  map: any;
-  constructor(private router: Router) { }
+  map: GoogleMap;
+  constructor(private router: Router, private platform: Platform) {
+  }
 
   goRun() {
     this.router.navigate(['run']);
   }
-  OnInit() {
-    const position = new google.maps.LatLng(-21.763409, -43.349034);
-    const mapOptions = {
-      zoom: 18,
-      center: position,
-      disableDefaultUI: true
-    };
-    this.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+  async ngOnInit() {
+    // Since ngOnInit() is executed before `deviceready` event,
+    // you have to wait the event.
+    await this.platform.ready();
+    await this.loadMap();
   }
 
+  loadMap() {
+    this.map = GoogleMaps.create('map_canvas', {
+      camera: {
+        target: {
+          lat: 43.0741704,
+          lng: -89.3809802
+        },
+        zoom: 18,
+        tilt: 30
+      }
+    });
+  }
 }
-
