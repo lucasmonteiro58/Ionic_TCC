@@ -9,17 +9,52 @@
   justify-content: center;
 }
 
-#map_canvas{
-  height: 100%;
-  //background-color: #f9f9f9;
+.progress{
+  position: absolute;
+  width: 86%;
+  left: 8%;
+  top: 6vh;
 }
 
-.gmnoprint{
-  display:none !important;
+.perfil{
+  position: absolute;
+  width: 64%;
+  left: 18%;
+  top: 12vh;
 }
 
 .button-start{
     height: 55px;
     width: 50%;
     font-size: 1.3em;
+}
+
+.infos{
+  margin-top: 50vh;
+}
+
+.img-calories, .img-steps{
+  width: 21%;
+  margin-right: 12px;
+  align-items: center;
+}
+
+.center-info{
+  justify-content: center;
+}
+
+.pulseira{
+  margin-left: 28%;
+  margin-top: 8vh;
+  .text-pulseira {
+    margin-right: 5px;
+    font-weight: 300;
+    font-size: 17px;
+  }
+}
+
+h1{
+  color: #757575;
+  font-size: 30px;
+  font-weight: 600;
 }

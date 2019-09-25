@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 @Component({
   selector: 'app-tabs',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  constructor(private statusBar: StatusBar) {
+    // let status bar overlay webview
+    this.statusBar.styleLightContent();
+
+    // set status bar to white
+    this.statusBar.backgroundColorByHexString('#ffffff');
+  }
 
 }

@@ -33,7 +33,7 @@
         [class.btn-play-content-2-ON]="isStarted" size="6">
         <ion-img class="pause-button" (click)="pauseRun()" [src]="btn2"></ion-img>
       </ion-col>
-      <ion-col [class.btn-play-content-3]="!isPaused" [class.btn-play-content-3-ON]="isPaused" size="6">
+      <ion-col [class.btn-play-content-3]="!isStarted" [class.btn-play-content-3-ON]="isStarted" size="6">
         <ion-img class="stop-button" (click)="stopRun()" [src]="btn3"></ion-img>
       </ion-col>
     </ion-row>

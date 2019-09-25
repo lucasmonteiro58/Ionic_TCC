@@ -1,0 +1,29 @@
+<ion-content>
+  <div class="linha-vertical"></div>
+  <div class="linha-horizontal"></div>
+  <ion-img class="btn-back" src="../assets/seta.svg" (click)="goBack()"></ion-img>
+  <ion-text class="titulo">{{data}}</ion-text>
+  <ion-img class="grafico" src="../assets/grafico.svg"></ion-img>
+
+  <div class="flexbox">
+    <div class="itens">
+      <div class="passos">{{passos}}</div>
+      <div class="legenda">Passos</div>
+    </div>
+    <div class="itens">
+      <div class="duracao">{{duracao}}</div>
+      <div class="legenda">Duração</div>
+    </div>
+  </div>
+  <div class="flexbox">
+    <div class="itens">
+      <div class="distancia">{{distancia}}<span class="unidade">km</span></div>
+      <div class="legenda">Distância</div>
+    </div>
+    <div class="itens">
+      <div class="calorias">{{calorias}}<span class="unidade">kcal</span></div>
+      <div class="legenda">Calorias</div>
+    </div>
+  </div>
+  
+</ion-content>
