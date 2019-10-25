@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 @Component({
   selector: 'app-tab3',
@@ -14,11 +13,8 @@ export class Tab3Page {
   viewCondicao: string;
   viewImc: string;
 
-  constructor(public navCtrl: NavController, private statusBar: StatusBar) {
-    // let status bar overlay webview
-    this.statusBar.styleLightContent();
-    // set status bar to white
-    this.statusBar.backgroundColorByHexString('#ffffff');
+  constructor(public navCtrl: NavController) {
+   
   }
 
   informarImc(imc: number): string {

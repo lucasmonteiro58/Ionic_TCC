@@ -7,7 +7,7 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   { path: 'run', loadChildren: './run/run.module#RunPageModule' },
-  { path: 'grafico', loadChildren: './grafico/grafico.module#GraficoPageModule' },
+  { path: 'grafico/:data/:passos/:duracao/:distancia/:calorias', loadChildren: './grafico/grafico.module#GraficoPageModule' },
   {
     path: 'back',
     children: [

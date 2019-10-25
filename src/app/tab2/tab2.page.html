@@ -3,31 +3,31 @@
   <!-- mapa view -->
   <ion-row>
     <ion-col size="12">
-        <ion-img class="progress" src="../assets/progress.svg"></ion-img>
-        <ion-img class="perfil" src="../assets/circulo.svg"></ion-img>
+        <img class="progress" aria-label="Progresso 82%" src="../assets/progress.svg"/>
+        <img  alt="imagem de perfil" aria-hidden="true" class="perfil" src="../assets/circulo.svg"/>
     </ion-col>
   </ion-row>
   <ion-row class="infos">
     <ion-col size="6">
-      <ion-row class="center-info">
-        <ion-img class="img-steps" src="../assets/steps.svg"></ion-img>
+      <ion-row aria-label="Passos" aria-hidden="false" class="center-info">
+        <img  aria-hidden="true" class="img-steps" src="../assets/steps.svg"/>
         <ion-text color="primary">
-          <h1>5432</h1>
+          <h1 aria-label="6453 Passos">6453</h1>
         </ion-text>
       </ion-row>
     </ion-col>
     <ion-col size="6">
-      <ion-row class="center-info">
-        <ion-img class="img-calories" src="../assets/fire.svg"></ion-img>
+      <ion-row aria-label="Calorias" aria-hidden="false" class="center-info">
+        <img aria-hidden="true" class="img-calories" src="../assets/fire.svg"/>
         <ion-text color="primary">
-          <h1>1090</h1>
+          <h1 aria-label="3456 Calorias">3456</h1>
         </ion-text>
       </ion-row>
     </ion-col>
   </ion-row>
-  <ion-row class="pulseira">
-    <ion-text class="text-pulseira">PULSEIRA CONECTADA</ion-text>
-    <ion-img src="../assets/bluetooth.svg"></ion-img>
+  <ion-row aria-label="Pulseira Conectada" class="pulseira">
+    <ion-text  class="text-pulseira">PULSEIRA CONECTADA</ion-text>
+    <img aria-hidden="true" src="../assets/bluetooth.svg"/>
   </ion-row>
 
   
@@ -35,7 +35,7 @@
   <!-- button -->
   <div class="float-bottom">
     <div class="position-center">
-      <ion-button class="button-start" shape="round" (click)="goRun()">Começar</ion-button>
+      <ion-button aria-label="Começar" class="button-start" shape="round" (click)="goRun()">Começar</ion-button>
     </div>
   </div>
 

@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-grafico',
   templateUrl: './grafico.page.html',
   styleUrls: ['./grafico.page.scss'],
 })
-export class GraficoPage {
+export class GraficoPage implements OnInit{
 
   public data: any;
   public passos: any;
@@ -15,14 +15,18 @@ export class GraficoPage {
   public calorias: any;
 
 
-  constructor(private router: Router) { 
-    this.data = '20/5';
-    this.passos = '3792';
-    this.duracao = '32:14';
-    this.distancia = '2.15';
-    this.calorias = '234';
+  constructor(private router: Router, public activeRoute: ActivatedRoute) {
   }
+
+  ngOnInit() {
+    this.data = this.activeRoute.snapshot.paramMap.get('data');
+    this.passos = this.activeRoute.snapshot.paramMap.get('passos');
+    this.duracao = this.activeRoute.snapshot.paramMap.get('duracao');
+    this.distancia = this.activeRoute.snapshot.paramMap.get('distancia');
+    this.calorias = this.activeRoute.snapshot.paramMap.get('calorias');
+  }
+
   goBack() {
-    this.router.navigate(['back']);
+    this.router.navigateByUrl('tabs/tab1');
   }
 }

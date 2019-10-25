@@ -8,6 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+// import { MobileAccessibility } from '@ionic-native/mobile-accessibility';
 // import { Geolocation } from '@ionic-native/geolocation';
 // import { GoogleMap, GoogleMaps } from '@ionic-native/google-maps';
 

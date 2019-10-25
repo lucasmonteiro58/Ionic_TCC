@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Router } from '@angular/router';
 import {Platform} from '@ionic/angular';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
+// import { MobileAccessibility } from '@ionic-native/mobile-accessibility';
+
 
 @Component({
   selector: 'app-tab2',
@@ -9,9 +10,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  constructor(private router: Router, private platform: Platform, private statusBar: StatusBar) {
-    this.statusBar.styleLightContent();
-    this.statusBar.backgroundColorByHexString('#ffffff');
+  constructor(private router: Router, private platform: Platform) {
+    
   }
 
   goRun() {
